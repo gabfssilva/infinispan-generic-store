@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class CacheEntry<K, V> implements Serializable {
-	private static final long serialVersionUID = -850818539998912635L;
+    private static final long serialVersionUID = -850818539998912635L;
 
-	private SerializableByteBuffer keyByteBuffer;
-	private SerializableByteBuffer valueByteBuffer;
-	private SerializableByteBuffer metadataByteBuffer;
+    private SerializableByteBuffer keyByteBuffer;
+    private SerializableByteBuffer valueByteBuffer;
+    private SerializableByteBuffer metadataByteBuffer;
 
-	private KeyEntry<K> key;
-	private V value;
-	
-	private Date expiration;
+    private KeyEntry<K> key;
+    private V value;
+
+    private Date expiration;
 
     public CacheEntry(SerializableByteBuffer keyByteBuffer, SerializableByteBuffer valueByteBuffer, SerializableByteBuffer metadataByteBuffer, KeyEntry<K> key, V value, Date expiration) {
         this.keyByteBuffer = keyByteBuffer;
@@ -36,44 +36,44 @@ public class CacheEntry<K, V> implements Serializable {
     }
 
     public V getValue() {
-		return value;
-	}
+        return value;
+    }
 
-	public void setValue(V value) {
-		this.value = value;
-	}
+    public void setValue(V value) {
+        this.value = value;
+    }
 
-	public SerializableByteBuffer getKeyByteBuffer() {
-		return keyByteBuffer;
-	}
+    public SerializableByteBuffer getKeyByteBuffer() {
+        return keyByteBuffer;
+    }
 
-	public void setKeyByteBuffer(SerializableByteBuffer keyByteBuffer) {
-		this.keyByteBuffer = keyByteBuffer;
-	}
+    public void setKeyByteBuffer(SerializableByteBuffer keyByteBuffer) {
+        this.keyByteBuffer = keyByteBuffer;
+    }
 
-	public SerializableByteBuffer getValueByteBuffer() {
-		return valueByteBuffer;
-	}
+    public SerializableByteBuffer getValueByteBuffer() {
+        return valueByteBuffer;
+    }
 
-	public void setValueByteBuffer(SerializableByteBuffer valueByteBuffer) {
-		this.valueByteBuffer = valueByteBuffer;
-	}
+    public void setValueByteBuffer(SerializableByteBuffer valueByteBuffer) {
+        this.valueByteBuffer = valueByteBuffer;
+    }
 
-	public SerializableByteBuffer getMetadataByteBuffer() {
-		return metadataByteBuffer;
-	}
+    public SerializableByteBuffer getMetadataByteBuffer() {
+        return metadataByteBuffer;
+    }
 
-	public void setMetadataByteBuffer(SerializableByteBuffer metadataByteBuffer) {
-		this.metadataByteBuffer = metadataByteBuffer;
-	}
+    public void setMetadataByteBuffer(SerializableByteBuffer metadataByteBuffer) {
+        this.metadataByteBuffer = metadataByteBuffer;
+    }
 
-	public Date getExpiration() {
-		return expiration;
-	}
+    public Date getExpiration() {
+        return expiration;
+    }
 
-	public void setExpiration(Date expiration) {
-		this.expiration = expiration;
-	}
+    public void setExpiration(Date expiration) {
+        this.expiration = expiration;
+    }
 
 
     @Override

@@ -1,17 +1,16 @@
 package org.infinispan.persistence.generic.cache;
 
-import java.util.Map;
-
 import org.infinispan.persistence.generic.cache.exception.GenericCacheException;
 
+import java.util.Map;
+
 /**
- * 
- * @author gabriel
- *
  * @param <K>
  * @param <V>
+ * @author gabriel
  */
 public interface GenericCache<K, V> extends Map<K, V> {
-	void init() throws GenericCacheException;
-	void removeExpiredData() throws GenericCacheException;
+    void init() throws GenericCacheException;
+
+    void removeExpiredData() throws GenericCacheException;
 }

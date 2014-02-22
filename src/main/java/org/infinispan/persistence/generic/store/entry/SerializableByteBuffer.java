@@ -1,60 +1,60 @@
 package org.infinispan.persistence.generic.store.entry;
 
-import java.io.Serializable;
-
 import org.infinispan.commons.io.ByteBuffer;
 
+import java.io.Serializable;
+
 public class SerializableByteBuffer implements Serializable, ByteBuffer {
-	private static final long serialVersionUID = -215291623591872364L;
+    private static final long serialVersionUID = -215291623591872364L;
 
-	private int offset;
-	private int lenght;
-	private byte[] buf;
+    private int offset;
+    private int lenght;
+    private byte[] buf;
 
-	public SerializableByteBuffer(byte[] buf, int lenght, int offset) {
-		super();
-		this.offset = offset;
-		this.lenght = lenght;
-		this.buf = buf;
-	}
-	
-	public SerializableByteBuffer() {
-		super();
-	}
+    public SerializableByteBuffer(byte[] buf, int lenght, int offset) {
+        super();
+        this.offset = offset;
+        this.lenght = lenght;
+        this.buf = buf;
+    }
 
-	@Override
-	public byte[] getBuf() {
-		return buf;
-	}
+    public SerializableByteBuffer() {
+        super();
+    }
 
-	@Override
-	public int getOffset() {
-		return offset;
-	}
+    @Override
+    public byte[] getBuf() {
+        return buf;
+    }
 
-	@Override
-	public int getLength() {
-		return lenght;
-	}
-	
-	public int getLenght() {
-		return lenght;
-	}
+    @Override
+    public int getOffset() {
+        return offset;
+    }
 
-	public void setLenght(int lenght) {
-		this.lenght = lenght;
-	}
+    @Override
+    public int getLength() {
+        return lenght;
+    }
 
-	public void setOffset(int offset) {
-		this.offset = offset;
-	}
+    public int getLenght() {
+        return lenght;
+    }
 
-	public void setBuf(byte[] buf) {
-		this.buf = buf;
-	}
+    public void setLenght(int lenght) {
+        this.lenght = lenght;
+    }
 
-	@Override
-	public ByteBuffer copy() {
-		return new SerializableByteBuffer(buf, lenght, offset);
-	}
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    public void setBuf(byte[] buf) {
+        this.buf = buf;
+    }
+
+    @Override
+    public ByteBuffer copy() {
+        return new SerializableByteBuffer(buf, lenght, offset);
+    }
 }
